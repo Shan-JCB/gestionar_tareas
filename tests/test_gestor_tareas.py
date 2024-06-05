@@ -45,5 +45,7 @@ class TestGestorTareas(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.gestor.eliminar_tarea("Tarea no existente")
 
+##Pruebas realizadas --- v4.0.0 --- Exitoso
+
 if __name__ == '__main__':
     unittest.main()
