@@ -29,3 +29,5 @@ class GestorTareas:
                 self.tareas.remove(tarea)
                 return
         raise ValueError("Tarea no encontrada")
+
+    ##Pruebas realizadas --- v4.0.0 --- Exitoso
