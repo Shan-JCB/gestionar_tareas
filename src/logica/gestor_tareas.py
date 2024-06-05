@@ -15,3 +15,11 @@ class GestorTareas:
 
     def ver_tareas(self):
         return self.tareas
+
+    def marcar_completada(self, titulo):
+        for tarea in self.tareas:
+            if tarea.titulo == titulo:
+                tarea.completada = True
+                return
+        raise ValueError("Tarea no encontrada")
+
