@@ -33,6 +33,7 @@ class TestGestorTareas(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.gestor.marcar_completada("Tarea no existente")
 
+##Pruebas realizadas --- v3.0.0 --- Exitoso
 
 if __name__ == '__main__':
     unittest.main()
