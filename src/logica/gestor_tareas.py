@@ -23,3 +23,11 @@ class GestorTareas:
                 return
         raise ValueError("Tarea no encontrada")
 
+    def eliminar_tarea(self, titulo):
+        for tarea in self.tareas:
+            if tarea.titulo == titulo:
+                self.tareas.remove(tarea)
+                return
+        raise ValueError("Tarea no encontrada")
+
+    ##Pruebas realizadas --- v4.0.0 --- Exitoso

@@ -35,5 +35,17 @@ class TestGestorTareas(unittest.TestCase):
 
 ##Pruebas realizadas --- v3.0.0 --- Exitoso
 
+    def test_eliminar_tarea(self):
+        self.gestor.agregar_tarea("Tarea 1", "Descripción de la tarea 1")
+        self.gestor.eliminar_tarea("Tarea 1")
+        self.assertEqual(len(self.gestor.tareas), 0)
+
+    def test_eliminar_tarea_no_existente(self):
+        self.gestor.agregar_tarea("Tarea 1", "Descripción de la tarea 1")
+        with self.assertRaises(ValueError):
+            self.gestor.eliminar_tarea("Tarea no existente")
+
+##Pruebas realizadas --- v4.0.0 --- Exitoso
+
 if __name__ == '__main__':
     unittest.main()
