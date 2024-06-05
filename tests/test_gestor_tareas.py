@@ -24,5 +24,15 @@ class TestGestorTareas(unittest.TestCase):
         self.assertEqual(tareas[0].titulo, "Tarea 1")
         self.assertEqual(tareas[1].titulo, "Tarea 2")
 
+    def test_marcar_tarea_completada(self):
+        self.gestor.agregar_tarea("Tarea 1", "Descripción de la tarea 1")
+        self.gestor.marcar_completada("Tarea 1")
+        self.assertTrue(self.gestor.tareas[0].completada)
+
+    def test_marcar_tarea_no_existente(self):
+        with self.assertRaises(ValueError):
+            self.gestor.marcar_completada("Tarea no existente")
+
+
 if __name__ == '__main__':
     unittest.main()
